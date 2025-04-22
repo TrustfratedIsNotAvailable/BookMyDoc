@@ -17,6 +17,8 @@ const router = createBrowserRouter([
     children:[
       {
           path:'/',
+          hydrateFallbackElement:<h1>Please Wait.Loading...</h1>,
+          loader: ()=>fetch('/Doctors.json'),
           Component: Home,
       },
       {
