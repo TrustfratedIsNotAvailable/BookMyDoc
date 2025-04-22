@@ -1,14 +1,19 @@
 import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
-import { Outlet } from 'react-router';
 import Footer from '../Components/Footer/Footer';
+import { Outlet, useLocation } from 'react-router';
 
 const Root = () => {
+    const location = useLocation();
+    const isContactPage = location.pathname === '/contactUs';
+
     return (
-        <div className='bg-[#EFEFEF]'>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className='bg-[#EFEFEF] min-h-screen flex flex-col'>
+            <Navbar />
+            <div className="flex-grow">
+                <Outlet />
+            </div>
+            {!isContactPage && <Footer />}
         </div>
     );
 };

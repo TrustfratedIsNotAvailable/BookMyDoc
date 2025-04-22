@@ -3,7 +3,6 @@ import {
 } from "react-router";
 import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
-import MyBookings from "../Pages/MyBookings/MyBookings";
 import Blogs from "../Pages/Blogs/Blogs";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
@@ -24,8 +23,8 @@ const router = createBrowserRouter([
           Component: Home,
       },
       {
-          path: 'myBookings',
-          Component: MyBookings ,
+          path: 'bookings',
+          Component: Bookings ,
       },
       {
           path: 'blogs',
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
         loader: ()=>fetch('/Doctors.json'),
         Component: ViewDetails
       },
-      {
-        path:'appointment',
-        Component: Bookings
-      }
     ]
   }
 ]);

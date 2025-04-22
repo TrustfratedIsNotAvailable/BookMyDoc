@@ -108,7 +108,7 @@ const ViewDetails = () => {
         </div>
 
         <NavLink
-          to={isAvailableToday ? "/appointment" : "#"}
+          to={isAvailableToday ? "/bookings" : "#"}
           onClick={(e) => {
             if (!isAvailableToday) {
               e.preventDefault();

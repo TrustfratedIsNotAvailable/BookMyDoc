@@ -11,8 +11,12 @@ const Card = ({ doctor }) => {
         education,
         speciality,
         experience,
-        registration_number
+        registration_number,
+        availability
     } = doctor;
+
+    const today = new Date().toLocaleString('en-US', { weekday: 'long' });
+    const isAvailableToday = availability.includes(today);
 
     return (
         <div className="card bg-base-100 shadow-sm overflow-hidden">
@@ -26,7 +30,7 @@ const Card = ({ doctor }) => {
 
             <div className="flex gap-3 px-8">
                 <button className="btn btn-outline btn-accent rounded-2xl">
-                    Available
+                    {isAvailableToday ? "Available" : "Not Available"}
                 </button>
                 <button className="btn btn-outline btn-accent rounded-2xl">
                     {experience}
