@@ -8,6 +8,7 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Bookings from "../Pages/Bookings/Bookings";
+import LoadingSpinner from "../Components/LoadingSpinner/LoadingSpinner";
 
 
 const router = createBrowserRouter([
@@ -18,9 +19,8 @@ const router = createBrowserRouter([
     children:[
       {
           path:'/',
-          hydrateFallbackElement:<h1>Please Wait.Loading...</h1>,
           loader: ()=>fetch('/Doctors.json'),
-          Component: Home,
+          Component: Home
       },
       {
           path: 'bookings',

@@ -2,6 +2,7 @@ import React from 'react';
 import { PiTrademarkRegisteredLight } from 'react-icons/pi';
 import { BsExclamationSquare } from "react-icons/bs";
 import { NavLink, useLoaderData,useParams } from 'react-router';
+import { toast } from 'react-toastify';
 
 const ViewDetails = () => {
   const data = useLoaderData();
@@ -112,15 +113,19 @@ const ViewDetails = () => {
           onClick={(e) => {
             if (!isAvailableToday) {
               e.preventDefault();
+              return;
             } else {
               // Get existing bookings from localStorage
               const existing = JSON.parse(localStorage.getItem("bookedDoctors")) || [];
           
-              // Avoid duplicates (optional)
+             
               const alreadyBooked = existing.find(doc => doc.id === singleDoctor.id);
-              if (!alreadyBooked) {
+              if (alreadyBooked) {
+                toast.error("You've already booked this doctor today!");
+              } else {
                 existing.push(singleDoctor);
                 localStorage.setItem("bookedDoctors", JSON.stringify(existing));
+                toast.success("Appointment booked successfully!");
               }
             }
           }}
