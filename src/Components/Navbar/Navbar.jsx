@@ -28,7 +28,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <div className='flex items-center gap-4'>
-                  <img src="images/logo.png" alt="" className='w-12 h-12'/>
+                  <img src="/images/logo.png" alt="" className='w-12 h-12'/>
                   <p className="font-extrabold text-3xl">Phudu</p>
               </div>
               

@@ -15,7 +15,7 @@ const Footer = () => {
         <>
             <footer className="footer footer-horizontal footer-center bg-white text-base-content rounded p-10">
                 <div className='flex items-center gap-4'>
-                    <img src="images/logo.png" alt="" className='w-12 h-12' />
+                    <img src="/images/logo.png" alt="" className='w-12 h-12' />
                     <p className="font-extrabold text-3xl">Phudu</p>
                 </div>
                 <nav className="grid grid-flow-col gap-4 text-[#0F0F0F70]">

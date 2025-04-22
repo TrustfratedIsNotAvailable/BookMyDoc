@@ -1,12 +1,15 @@
 import React from 'react';
 import './Card.css';
 import { PiTrademarkRegisteredLight } from "react-icons/pi";
+import { NavLink } from 'react-router';
 
 const Card = ({ doctor }) => {
     const {
+        id,
         image,
         name,
         education,
+        speciality,
         experience,
         registration_number
     } = doctor;
@@ -30,9 +33,9 @@ const Card = ({ doctor }) => {
                 </button>
             </div>
 
-            <div className="card-body items-start text-left">
+            <div className="card-body-container items-start text-left">
                 <h2 className="card-title">{name}</h2>
-                <p>{education}</p>
+                    <p>{education} - {speciality}</p>
                 <hr />
                 
                 <div className="flex items-center gap-2">
@@ -41,10 +44,11 @@ const Card = ({ doctor }) => {
                 </div>
 
                 <div className="card-actions mt-4">
-                    <button className="btn btn-outline btn-primary">
-                        View Details
-                    </button>
+                <NavLink to={`/doctors/${id}`} className="btn btn-outline btn-primary">
+                    View Details
+                </NavLink>
                 </div>
+                
             </div>
         </div>
     );

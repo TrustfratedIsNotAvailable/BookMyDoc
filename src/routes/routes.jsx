@@ -7,6 +7,7 @@ import MyBookings from "../Pages/MyBookings/MyBookings";
 import Blogs from "../Pages/Blogs/Blogs";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path: 'contactUs',
         Component: ContactUs,
       },
+      {
+        path:'doctors/:id',
+        loader: ()=>fetch('/Doctors.json'),
+        Component: ViewDetails
+      }
     ]
   }
 ]);
