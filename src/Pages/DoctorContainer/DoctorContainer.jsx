@@ -13,13 +13,13 @@ const DoctorContainer = ({ doctors, showAll, onToggle }) => {
                 Whether it's a <br /> routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+            <div className="max-w-[95%] md:max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
                 {doctors.map((doctor) => (
                     <Card key={doctor.id} doctor={doctor} />
                 ))}
             </div>
 
-            <div className="text-center">
+            <div className="text-center my-20">
                 <button
                     onClick={onToggle}
                     className="btn bg-indigo-800 text-white text-xl rounded-4xl px-[30px] py-[15px]"

@@ -18,9 +18,23 @@ const Card = ({ doctor }) => {
     const today = new Date().toLocaleString('en-US', { weekday: 'long' });
     const isAvailableToday = availability.includes(today);
 
+    // Determine experience label
+    let experienceLabel = "";
+    if (experience >= 20) {
+        experienceLabel = "20+ Years Experience";
+    } else if (experience >= 15) {
+        experienceLabel = "15+ Years Experience";
+    } else if (experience >= 10) {
+        experienceLabel = "10+ Years Experience";
+    } else if (experience >= 5) {
+        experienceLabel = "5+ Years Experience";
+    } else {
+        experienceLabel = `${experience} Years Experience`;
+    }
+
     return (
-        <div className="card bg-base-100 shadow-sm overflow-hidden">
-            <figure className="px-8 pt-8 mb-4">
+        <div className="card bg-base-100 shadow-sm overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+            <figure className="px-6 pt-6 mb-4 flex justify-center">
                 <img
                     src={image}
                     alt={name}
@@ -28,31 +42,33 @@ const Card = ({ doctor }) => {
                 />
             </figure>
 
-            <div className="flex gap-3 px-8">
-                <button className="btn btn-outline btn-accent rounded-2xl">
+            <div className="flex flex-wrap gap-3 px-6 mb-4">
+                <span className="badge badge-outline text-sm px-4 py-2 rounded-2xl text-indigo-800 border-indigo-800">
                     {isAvailableToday ? "Available" : "Not Available"}
-                </button>
-                <button className="btn btn-outline btn-accent rounded-2xl">
-                    {experience}
-                </button>
+                </span>
+                <span className="badge badge-outline text-sm px-4 py-2 rounded-2xl text-indigo-800 border-indigo-800">
+                    {experienceLabel}
+                </span>
             </div>
 
-            <div className="card-body-container items-start text-left">
-                <h2 className="card-title">{name}</h2>
-                    <p>{education} - {speciality}</p>
-                <hr />
-                
-                <div className="flex items-center gap-2">
-                    <PiTrademarkRegisteredLight size={20} color="#0F0F0F70" />
-                    <p>Reg No: {registration_number}</p>
+            <div className="px-6 pb-6 text-left">
+                <h2 className="text-lg font-bold mb-1">{name}</h2>
+                <p className="text-sm text-gray-700 mb-2">{education} - {speciality}</p>
+                <hr className="my-2" />
+
+                <div className="flex items-center gap-2 text-sm text-gray-600 mt-2">
+                    <PiTrademarkRegisteredLight size={18} color="#0F0F0F70" />
+                    <span>Reg No: {registration_number}</span>
                 </div>
 
-                <div className="card-actions mt-4">
-                <NavLink to={`/doctors/${id}`} className="btn btn-outline btn-primary">
-                    View Details
-                </NavLink>
+                <div className="mt-4">
+                    <NavLink
+                        to={`/doctors/${id}`}
+                        className="btn btn-sm md:btn-md btn-outline btn-primary w-full"
+                    >
+                        View Details
+                    </NavLink>
                 </div>
-                
             </div>
         </div>
     );

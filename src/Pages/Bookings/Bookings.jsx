@@ -31,8 +31,8 @@ const Bookings = () => {
   return (
 
     <div className="max-w-4xl mx-auto mt-8 px-4">
-      <h1 className="text-2xl font-bold mb-4">My Today Appointments</h1>
-      <p className="mb-6">
+      <h1 className="text-2xl font-bold mb-4 text-center">My Today Appointments</h1>
+      <p className="mb-6 text-center">
         Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.
       </p>
 
@@ -81,7 +81,9 @@ const Bookings = () => {
 
         </>
       ) : (
-        <p className="text-gray-500">No appointments booked yet.</p>
+        <p className="text-[#0F0F0F90] text-2xl text-center min-h-[calc(100vh-470px)] flex items-center justify-center">
+  No appointments yet — your journey starts with one click. Let’s get you scheduled!
+</p>
       )}
     </div>
     
