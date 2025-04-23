@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
+import Rechart from '../../Components/Rechart/Rechart';
 
 const Bookings = () => {
   const [bookedDoctors, setBookedDoctors] = useState([]);
@@ -29,8 +28,13 @@ const Bookings = () => {
   }));
 
   return (
+    <>
+     <Helmet>
+        <title>My Bookings | Phudu</title>
+        <link rel="icon" href="/images/bookings.png" />
+      </Helmet>
 
-    <div className="max-w-4xl mx-auto mt-8 px-4">
+      <div className="max-w-4xl mx-auto mt-8 px-4">
       {bookedDoctors.length > 0 ? (
         <>
              <h1 className="text-2xl font-bold mb-4 text-center">My Today Appointments</h1>
@@ -41,26 +45,9 @@ const Bookings = () => {
 <div className="mb-12 bg-gradient-to-br from-white to-gray-100 p-6 rounded-xl shadow-lg border border-gray-200">
   <h2 className="text-xl font-bold mb-6 text-gray-800 text-center">💰 Consultation Fee Overview</h2>
 
-  <ResponsiveContainer width="100%" height={380}>
-    <BarChart
-      data={chartData}
-      margin={{ top: 10, right: 30, left: 0, bottom: 5 }}
-    >
-      <defs>
-        <linearGradient id="colorFee" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#34d399" stopOpacity={0.8}/>
-          <stop offset="95%" stopColor="#10b981" stopOpacity={0.2}/>
-        </linearGradient>
-      </defs>
-
-      <CartesianGrid strokeDasharray="4 4" stroke="#e5e7eb" />
-      <XAxis dataKey="name" tick={{ fontSize: 12 }} />
-      <YAxis tick={{ fontSize: 12 }} />
-      <Tooltip contentStyle={{ backgroundColor: "#f9fafb", borderRadius: "8px", borderColor: "#d1d5db" }} />
-      <Legend />
-      <Bar dataKey="value" name="Fee" fill="url(#colorFee)" radius={[6, 6, 0, 0]} />
-    </BarChart>
-  </ResponsiveContainer>
+  <div className='flex justify-center'>
+  <Rechart data={chartData} />
+  </div>
 </div>
 
 
@@ -90,7 +77,7 @@ const Bookings = () => {
         <>
         <div className="flex flex-col items-center justify-center text-center min-h-[calc(100vh-64px)] space-y-6 px-3">
           <img
-            src="/public/images/no-appoinment.png"
+            src="/images/booking-now.png"
             alt="No appointments illustration"
             className="w-[200px] h-[180px]"
           />
@@ -108,6 +95,10 @@ const Bookings = () => {
       
       )}
     </div>
+
+    </>
+
+ 
     
   );
 };

@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero';
 import DoctorContainer from '../DoctorContainer/DoctorContainer';
 import { useLoaderData } from 'react-router';
 import StatsSection from '../../Components/StatsSection/StatsSection';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     const data = useLoaderData();
@@ -46,6 +47,11 @@ const Home = () => {
 
     return (
         <>
+
+<Helmet>
+        <title>Home | Phudu</title>
+        <link rel="icon" href="/images/home.png" />
+      </Helmet>
             <Hero handleSearch={handleSearch}/>
             <DoctorContainer
                 doctors={doctors}

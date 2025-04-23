@@ -1,8 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Blogs = () => {
     return (
-        <section className="max-w-[95%] md:max-w-[80%] mx-auto px-4 py-10">
+        <>
+         <Helmet>
+        <title>Blogs | Phudu</title>
+        <link rel="icon" href="/images/blogs.png" />
+      </Helmet>
+      <section className="max-w-[95%] md:max-w-[80%] mx-auto px-4 py-10">
             <h2 className="text-3xl font-bold text-center mb-10 text-[#176AE5]">React FAQs</h2>
 
             <div className="space-y-6">
@@ -22,6 +28,8 @@ const Blogs = () => {
                 ))}
             </div>
         </section>
+        </>
+       
     );
 };
 

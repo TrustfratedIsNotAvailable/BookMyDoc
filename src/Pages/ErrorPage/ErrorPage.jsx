@@ -1,12 +1,17 @@
 import React from 'react';
 import { useRouteError } from 'react-router';
 import Navbar from '../../Components/Navbar/Navbar';
+import { Helmet } from 'react-helmet';
 
 const ErrorPage = () => {
   const error = useRouteError();
 
   return (
     <>
+         <Helmet>
+        <title>Error | Phudu</title>
+        <link rel="icon" href="/images/undraw_page-not-found_6wni.svg" />
+      </Helmet>
       <Navbar />
       <div className="flex flex-col justify-center items-center min-h-[calc(100vh-48px)] bg-gray-100 px-4 text-center">
         

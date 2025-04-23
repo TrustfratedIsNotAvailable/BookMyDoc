@@ -1,10 +1,16 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaFacebook, FaLinkedin, FaSquareXTwitter, FaYoutube } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
     return (
-        <div className="min-h-[calc(100vh-64px)] bg-white px-4 md:px-10 py-8 flex items-center justify-center">
+        <>
+         <Helmet>
+      <title>Contact Us | Your App</title>
+      <link rel="icon" href="/images/contact-us.png" />
+    </Helmet>
+          <div className="min-h-[calc(100vh-64px)] bg-white px-4 md:px-10 py-8 flex items-center justify-center">
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 {/* Contact Info */}
                 <div className="space-y-4 text-[#0F0F0F] text-sm md:text-base">
@@ -91,6 +97,7 @@ const ContactUs = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

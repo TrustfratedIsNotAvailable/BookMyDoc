@@ -4,9 +4,9 @@ import { FaUserMd, FaStar, FaUsers, FaUserFriends } from 'react-icons/fa';
 
 const stats = [
   { image:'/images/success-doctor.png' , label: 'Total Doctors', end: 199 },
-  { image:'/public/images/success-review.png', label: 'Total Reviews', end: 467 },
-  { image:'/public/images/success-patients.png', label: 'Patients', end: 1900 },
-  { image:'/public/images/success-staffs.png', label: 'Total Staffs', end: 300 },
+  { image:'/images/success-review.png', label: 'Total Reviews', end: 467 },
+  { image:'/images/success-patients.png', label: 'Patients', end: 1900 },
+  { image:'/images/success-staffs.png', label: 'Total Staffs', end: 300 },
 ];
 
 const StatsSection = () => {

@@ -1,8 +1,9 @@
 import React from 'react';
 import { PiTrademarkRegisteredLight } from 'react-icons/pi';
 import { BsExclamationSquare } from "react-icons/bs";
-import { NavLink, useLoaderData,useParams } from 'react-router';
+import { NavLink, useLoaderData, useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const ViewDetails = () => {
   const data = useLoaderData();
@@ -25,6 +26,10 @@ const ViewDetails = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{name}'s Details | Phudu</title>
+        <link rel="icon" href="/images/viewDetails.png" />
+      </Helmet>
       <div className="bg-white max-w-[95%] md:max-w-[80%] mx-auto my-6 md:my-10 px-4 sm:px-6 md:px-10 lg:px-[100px] py-6 md:py-8 rounded-lg">
         <h1 className="text-2xl sm:text-3xl md:text-[32px] text-[#0F0F0F] font-extrabold text-center mb-4 md:mb-6">
           Doctor’s Profile Details
