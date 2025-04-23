@@ -1,33 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 const Blogs = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 400);
+  
+      return () => clearTimeout(timer);
+    }, []);
     return (
         <>
          <Helmet>
         <title>Blogs | Phudu</title>
         <link rel="icon" href="/images/blogs.png" />
       </Helmet>
-      <section className="max-w-[95%] md:max-w-[80%] mx-auto px-4 py-10">
-            <h2 className="text-3xl font-bold text-center mb-10 text-[#176AE5]">React FAQs</h2>
-
-            <div className="space-y-6">
-                {faqData.map((faq, index) => (
-                    <div
-                        key={index}
-                        className="collapse collapse-plus bg-[#176AE520] border border-[#176AE550] rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
-                    >
-                        <input type="radio" name="react-accordion" defaultChecked={index === 0} />
-                        <div className="collapse-title font-semibold text-base md:text-lg text-[#176AE5]">
-                            {faq.title}
-                        </div>
-                        <div className="collapse-content text-sm text-gray-700">
-                            {faq.content}
-                        </div>
-                    </div>
-                ))}
+      {
+        loading ? (
+            <div className="flex items-center justify-center min-h-[calc(100vh-48px)]">
+              <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
             </div>
-        </section>
+          ):( <>
+            <section className="max-w-[95%] md:max-w-[80%] mx-auto px-4 py-10">
+                  <h2 className="text-3xl font-bold text-center mb-10 text-[#176AE5]">React FAQs</h2>
+      
+                  <div className="space-y-6">
+                      {faqData.map((faq, index) => (
+                          <div
+                              key={index}
+                              className="collapse collapse-plus bg-[#176AE520] border border-[#176AE550] rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                          >
+                              <input type="radio" name="react-accordion" defaultChecked={index === 0} />
+                              <div className="collapse-title font-semibold text-base md:text-lg text-[#176AE5]">
+                                  {faq.title}
+                              </div>
+                              <div className="collapse-content text-sm text-gray-700">
+                                  {faq.content}
+                              </div>
+                          </div>
+                      ))}
+                  </div>
+              </section>
+            </>)
+      }
+   
+      
         </>
        
     );
