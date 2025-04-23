@@ -13,19 +13,16 @@ const ViewDetails = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, []);
 
   const singleDoctor = data.find(doc => doc.id === parseInt(id));
 
+
   if (!singleDoctor) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <p className="text-lg font-medium text-gray-600">Doctor not found.</p>
-      </div>
-    );
+    toast.warn('No doctor found');
   }
 
   const {
