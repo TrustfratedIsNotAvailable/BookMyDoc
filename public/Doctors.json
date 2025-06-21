@@ -1,146 +1,193 @@
-
-  [
+[
   {
     "id": 1,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-1F.jpg?raw=true",
+    "image": "/images/doctor-1F.jpg",
     "name": "Dr. Nusrat Jahan",
     "education": "MBBS, FCPS",
     "speciality": "General Physician",
     "experience": 10,
     "working_at": "Square Hospital, Dhaka",
-    "availability": ["Sunday", "Tuesday", "Thursday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Thursday"
+    ],
     "registration_number": "BMDC-105643",
     "fee": 500
   },
   {
     "id": 2,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-1M.jpg?raw=true",
+    "image": "/images/doctor-1M.jpg",
     "name": "Dr. Md. Tanvir Alam",
     "education": "MBBS, MS (Ortho)",
     "speciality": "Orthopaedic Surgeon",
     "experience": 9,
     "working_at": "Popular Diagnostic Center, Dhanmondi",
-    "availability": ["Monday", "Wednesday", "Friday"],
+    "availability": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
     "registration_number": "BMDC-208964",
     "fee": 800
   },
   {
     "id": 3,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-2F.jpg?raw=true",
+    "image": "/images/doctor-2F.jpg",
     "name": "Dr. Samia Rahman",
     "education": "MBBS, DCH",
     "speciality": "Pediatrician",
     "experience": 7,
     "working_at": "Ibn Sina Hospital, Dhaka",
-    "availability": ["Saturday", "Monday", "Wednesday"],
+    "availability": [
+      "Saturday",
+      "Monday",
+      "Wednesday"
+    ],
     "registration_number": "BMDC-332198",
     "fee": 600
   },
   {
     "id": 4,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-2M.jpg?raw=true",
+    "image": "/images/doctor-2M.jpg",
     "name": "Dr. Farhan Ahmed",
     "education": "MBBS, MD (Derm)",
     "speciality": "Dermatologist",
     "experience": 12,
     "working_at": "Evercare Hospital, Dhaka",
-    "availability": ["Sunday", "Tuesday", "Thursday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Thursday"
+    ],
     "registration_number": "BMDC-412289",
     "fee": 900
   },
   {
     "id": 5,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-3F.jpg?raw=true",
+    "image": "/images/doctor-3F.jpg",
     "name": "Dr. Rukhsana Hossain",
     "education": "MBBS, MS (ENT)",
     "speciality": "ENT Specialist",
     "experience": 8,
     "working_at": "Labaid Hospital, Gulshan",
-    "availability": ["Monday", "Wednesday", "Friday"],
+    "availability": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
     "registration_number": "BMDC-573002",
     "fee": 700
   },
   {
     "id": 6,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-3M.jpg?raw=true",
+    "image": "/images/doctor-3M.jpg",
     "name": "Dr. Aminul Islam",
     "education": "MBBS, MD (Cardio)",
     "speciality": "Cardiologist",
     "experience": 15,
     "working_at": "Bangabandhu Sheikh Mujib Medical University (BSMMU)",
-    "availability": ["Sunday", "Tuesday", "Thursday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Thursday"
+    ],
     "registration_number": "BMDC-666123",
     "fee": 1000
   },
   {
     "id": 7,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-4F.jpg?raw=true",
+    "image": "/images/doctor-4F.jpg",
     "name": "Dr. Fariha Nizam",
     "education": "MBBS, FCPS (Gynae)",
     "speciality": "Gynecologist",
     "experience": 11,
     "working_at": "United Hospital, Dhaka",
-    "availability": ["Saturday", "Monday", "Thursday"],
+    "availability": [
+      "Saturday",
+      "Monday",
+      "Thursday"
+    ],
     "registration_number": "BMDC-721456",
     "fee": 750
   },
   {
     "id": 8,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-4M.jpg?raw=true",
+    "image": "/images/doctor-4M.jpg",
     "name": "Dr. Mahbubur Rahman",
     "education": "MBBS, FCPS (Psych)",
     "speciality": "Psychiatrist",
     "experience": 13,
     "working_at": "National Institute of Mental Health, Dhaka",
-    "availability": ["Sunday", "Tuesday", "Friday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Friday"
+    ],
     "registration_number": "BMDC-881990",
     "fee": 850
   },
   {
     "id": 9,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-5F.jpg?raw=true",
+    "image": "/images/doctor-5F.jpg",
     "name": "Dr. Rifat Jahan",
     "education": "MBBS, MD (Pulmo)",
     "speciality": "Pulmonologist",
     "experience": 9,
     "working_at": "Dhaka Medical College Hospital",
-    "availability": ["Monday", "Wednesday", "Saturday"],
+    "availability": [
+      "Monday",
+      "Wednesday",
+      "Saturday"
+    ],
     "registration_number": "BMDC-902347",
     "fee": 700
   },
   {
     "id": 10,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-5M.jpg?raw=true",
+    "image": "/images/doctor-5M.jpg",
     "name": "Dr. Hasan Uddin",
     "education": "MBBS, MS (Eye)",
     "speciality": "Ophthalmologist",
     "experience": 14,
     "working_at": "Chittagong Eye Infirmary and Training Complex",
-    "availability": ["Sunday", "Tuesday", "Thursday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Thursday"
+    ],
     "registration_number": "BMDC-631720",
     "fee": 600
   },
   {
     "id": 11,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Female-Doctors/doctor-6F.jpg?raw=true",
+    "image": "/images/doctor-6F.jpg",
     "name": "Dr. Shaila Parvin",
     "education": "MBBS, MD (Endo)",
     "speciality": "Endocrinologist",
     "experience": 10,
     "working_at": "BIRDEM General Hospital, Dhaka",
-    "availability": ["Saturday", "Monday", "Wednesday"],
+    "availability": [
+      "Saturday",
+      "Monday",
+      "Wednesday"
+    ],
     "registration_number": "BMDC-778912",
     "fee": 950
   },
   {
     "id": 12,
-    "image": "https://github.com/TrustfratedIsNotAvailable/Image-collection/blob/main/doctors-image/Male-Doctors/doctor-6M.jpg?raw=true",
+    "image": "/images/doctor-6M.jpg",
     "name": "Dr. Asif Imtiaz",
     "education": "MBBS, MD (Neuro)",
     "speciality": "Neurologist",
     "experience": 16,
     "working_at": "National Institute of Neurosciences and Hospital",
-    "availability": ["Sunday", "Tuesday", "Friday"],
+    "availability": [
+      "Sunday",
+      "Tuesday",
+      "Friday"
+    ],
     "registration_number": "BMDC-990678",
     "fee": 1100
   }
