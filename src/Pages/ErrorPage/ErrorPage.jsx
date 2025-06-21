@@ -1,53 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { useRouteError } from 'react-router';
-import Navbar from '../../Components/Navbar/Navbar';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Link } from "react-router";
+import { BiError } from "react-icons/bi";
+import { Helmet } from "react-helmet";
 
 const ErrorPage = () => {
-  const error = useRouteError();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <Helmet>
-        <title>Error | Phudu</title>
-        <link rel="icon" href="/images/undraw_page-not-found_6wni.svg" />
+        <title>Error</title>
       </Helmet>
-      <Navbar />
-      <div className="flex flex-col justify-center items-center min-h-[calc(100vh-48px)] bg-gray-100 px-4 text-center">
-        {loading ? (
-          <div className="flex items-center justify-center min-h-[calc(100vh-48px)]">
-            <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        ) : (
-          <>
-            <img
-              src="/images/undraw_page-not-found_6wni.svg"
-              alt="Page Not Found"
-              className="w-72 mb-6"
-            />
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Page Not Found
-            </h2>
-            <p className="text-lg text-gray-600 max-w-md mb-6">
-              {error?.statusText || "We couldn't find the page you're looking for."}
-            </p>
-            <a
-              href="/"
-              className="bg-indigo-800 text-white px-6 py-3 rounded-md text-lg font-medium shadow hover:bg-indigo-700 transition"
-            >
-              Back to Home
-            </a>
-          </>
-        )}
+      <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-white text-gray-800">
+        <BiError size={80} className="text-red-500 mb-4" />
+        <h1 className="text-4xl font-bold mb-2">Oops! Page Not Found</h1>
+        <p className="text-lg mb-6">
+          The page you're looking for doesn't exist or an error occurred.
+        </p>
+        <Link
+          to="/"
+          className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+        >
+          Go Back Home
+        </Link>
       </div>
     </>
   );

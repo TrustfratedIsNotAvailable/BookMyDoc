@@ -47,8 +47,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home | Phudu</title>
-        <link rel="icon" href="/images/home.png" />
+        <title>BookMyDoc</title>
       </Helmet>
 
       <Hero handleSearch={handleSearch} />

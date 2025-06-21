@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { FaFacebook, FaLinkedin, FaSquareXTwitter, FaYoutube } from 'react-icons/fa6';
-import { Helmet } from 'react-helmet';
+import React, { useEffect, useState } from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(true);
@@ -17,8 +16,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Your App</title>
-        <link rel="icon" href="/images/contact-us.png" />
+        <title>Contact Us</title>
       </Helmet>
 
       {loading ? (
@@ -32,7 +30,8 @@ const ContactUs = () => {
             <div className="space-y-4 text-[#0F0F0F] text-sm md:text-base">
               <h2 className="text-3xl font-bold mb-2">Get in Touch</h2>
               <p className="text-[#0F0F0F80]">
-                Have a question or just want to say hello? We'd love to hear from you!
+                Have a question or just want to say hello? We'd love to hear
+                from you!
               </p>
 
               <div className="flex items-start gap-3">
@@ -55,30 +54,17 @@ const ContactUs = () => {
                 <FaEnvelope className="text-[#176AE5] mt-1" />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p>support@phudu.com</p>
+                  <p>support@bookmydoc.com</p>
                 </div>
-              </div>
-
-              <div className="flex gap-4 pt-2">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook size={24} className="text-[#1877F2] hover:scale-110 transition" />
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                  <FaSquareXTwitter size={24} className="text-black hover:scale-110 transition" />
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin size={24} className="text-[#0A66C2] hover:scale-110 transition" />
-                </a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube size={24} className="text-[#FF0000] hover:scale-110 transition" />
-                </a>
               </div>
             </div>
 
             {/* Contact Form */}
             <form className="bg-[#F9F9F9] rounded-lg p-5 shadow space-y-4 text-sm md:text-base">
               <div>
-                <label className="block mb-1 font-medium text-[#0F0F0F]">Full Name</label>
+                <label className="block mb-1 font-medium text-[#0F0F0F]">
+                  Full Name
+                </label>
                 <input
                   type="text"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#176AE5]"
@@ -88,7 +74,9 @@ const ContactUs = () => {
               </div>
 
               <div>
-                <label className="block mb-1 font-medium text-[#0F0F0F]">Email Address</label>
+                <label className="block mb-1 font-medium text-[#0F0F0F]">
+                  Email Address
+                </label>
                 <input
                   type="email"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#176AE5]"
@@ -98,7 +86,9 @@ const ContactUs = () => {
               </div>
 
               <div>
-                <label className="block mb-1 font-medium text-[#0F0F0F]">Message</label>
+                <label className="block mb-1 font-medium text-[#0F0F0F]">
+                  Message
+                </label>
                 <textarea
                   rows="3"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#176AE5]"
